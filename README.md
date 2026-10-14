@@ -32,16 +32,31 @@ I independently developed this project as a machine learning course final projec
 
 ## Selected Findings
 
-The existing nine-cluster output contains several interpretable purchasing profiles:
+The nine-cluster segmentation using behavioral features and department preferences, with produce and dairy/eggs excluded from the feature set, reveals five specialized shopping profiles:
 
-| Cluster | Customers | Observed pattern |
+| Shopping profile (cluster) | Customers | Supporting evidence |
 | --- | ---: | --- |
-| 0 | 16,753 | Beverages and snacks account for mean purchase shares of 32.6% and 25.2%, respectively. |
-| 6 | 1,995 | Alcohol accounts for a mean purchase share of 47.3%. |
-| 7 | 36,794 | Customers average 43.6 recorded orders, a 7.9-day order interval, and a 68.7% repeat-purchase ratio. |
-| 8 | 4,521 | Baby products account for a mean purchase share of 20.9%. |
+| Beverage & snack shoppers (0) | 16,753 | Beverages and snacks account for mean purchase shares of 32.6% and 25.2%, respectively. |
+| Frozen-food shoppers (2) | 16,842 | Frozen products account for a mean purchase share of 25.0%. |
+| Household-oriented shoppers (3) | 7,647 | Household and personal care products account for mean purchase shares of 22.5% and 12.9%, respectively. |
+| Alcohol-oriented shoppers (6) | 1,995 | Alcohol accounts for a mean purchase share of 47.3%. |
+| Baby-product shoppers (8) | 4,521 | Baby products account for a mean purchase share of 20.9%. |
 
-These statistics were calculated from the saved segmentation table. Category shares are averaged across customers and retain all purchased products in the denominator. Profile descriptions are interpretations of shopping behavior; demographic characteristics are not available.
+Frequently purchased products provide concrete examples of these preferences:
+
+| Cluster | Representative products |
+| --- | --- |
+| 0 — Beverage & snack | Soda; Sparkling Water Grapefruit; Spring Water; Lime Sparkling Water. |
+| 2 — Frozen food | Blueberries; Macaroni & Cheese; Organic Broccoli Florets; Chocolate Ice Cream. |
+| 3 — Household | Ultra Soft Facial Tissues; White Giant Paper Towel Rolls; Select-A-Size White Paper Towels. |
+| 6 — Alcohol | India Pale Ale; Beer; Sauvignon Blanc; Cabernet Sauvignon; Chardonnay. |
+| 8 — Baby products | Baby Food Stage 2 Blueberry Pear & Purple Carrot; Spinach Peas & Pear Stage 2 Baby Food. |
+
+Product examples are drawn from the most frequently purchased items in each cluster after excluding produce and dairy/eggs. These lists summarize product popularity within a segment; joint purchases are examined separately through association rules.
+
+The analysis also identifies a behavioral pattern in **cluster 7**: its 36,794 customers average 43.6 recorded orders, a 7.9-day order interval, and a 68.7% repeat-purchase ratio. This group highlights frequent repeat purchasing alongside the category-oriented profiles above.
+
+Customer counts and category shares were calculated from the saved segmentation table, and product examples were checked against the historical analysis table. Category shares are averaged across customers and retain all purchased products in the denominator. These are five selected profiles from a nine-cluster result; profile names are interpretations of shopping behavior, and demographic characteristics are not available.
 
 ![Mean department purchase ratios for the saved nine-cluster segmentation](Final%20Project/results/figures/customer_segment_preferences.png)
 
